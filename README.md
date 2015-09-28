@@ -2,7 +2,7 @@
 
 ## Description
 
-
+RapSheet provides users with a visual history of crime, the impact of crime-related legislation and various questions about the criminal justice system in America. 
 
 ## Screenshots
 
@@ -10,9 +10,7 @@ COMING SOON TO A RAPSHEET NEAR YOU
 
 ## Background
 
-We set out to have fun building something new. We also were curious about how to create an app that could integrate well on a mobile device.
-
-We decided to work with the Twilio API to create a user experience that everyone could use - text messages. We wanted a simple, fast UX with a minimal front-end.
+We decided to venture into the world of data-mashing and data visualizations with the D3 JavaScript library. 
 
 ## Features
 
