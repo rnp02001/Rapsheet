@@ -1,0 +1,2 @@
+class AnnualStateCrimeRatesController < ApplicationController
+end
