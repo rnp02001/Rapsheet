@@ -11,9 +11,15 @@ var map = new Datamap({
     geographyConfig: {
            popupTemplate: function(geo, data) {
                return ['<div class="hoverinfo"><strong>',
-                       'Number of things in ' + geo.properties.name,
-                       ': ' + data.numberOfThings,
-                       '</strong></div>'].join('');
+                      'State Name:\n',
+                      'Burglary!\n',
+                      'Fire!\n',
+                      'Kill!\n',
+                      'Pillage!\n',
+                      '</strong></div>'].join('');
+                      //  'Number of things in ' + geo.properties.name,
+                      //  ': ' + data.numberOfThings,
+                      //  '</strong></div>'].join('');
            }
      }
     //go to https://github.com/markmarkoh/datamaps/blob/master/README.md#custom-popup-on-hover for info on hover-over -- reccomends underscore template
