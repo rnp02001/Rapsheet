@@ -1,0 +1,29 @@
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+<script src="../assets/javascripts/datamaps.all.min.js"></script> -->
+<!-- <div id="container" style="position: relative; width: 85%; height: 85%;"></div> -->
+<script>
+var map = new Datamap({
+    element: document.getElementById('container'),
+    scope: 'usa',
+    responsive: true,
+    geographyConfig: {
+           popupTemplate: function(geo, data) {
+               return ['<div class="hoverinfo"><strong>',
+                      geo.properties.name +
+                      'Burglary!\n',
+                      'Fire!\n',
+                      'Kill!\n',
+                      'Pillage!\n',
+                      '</strong></div>'].join('');
+                      //  'Number of things in ' + geo.properties.name,
+                      //  ': ' + data.numberOfThings,
+                      //  '</strong></div>'].join('');
+           }
+     }
+    //go to https://github.com/markmarkoh/datamaps/blob/master/README.md#custom-popup-on-hover for info on hover-over -- reccomends underscore template
+    });
+    window.addEventListener('resize', function() {
+        map.resize();
+    });
+</script>

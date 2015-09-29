@@ -1,8 +1,6 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
-<script src="../assets/javascripts/datamaps.all.min.js"></script>
-<div id="container" style="position: relative; width: 85%; height: 85%;"></div>
-<script>
+
+$(document).ready(function() {
+
 var map = new Datamap({
     element: document.getElementById('container'),
     scope: 'usa',
@@ -26,4 +24,4 @@ var map = new Datamap({
     window.addEventListener('resize', function() {
         map.resize();
     });
-</script>
+  });
