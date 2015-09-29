@@ -19,7 +19,7 @@ states = State.create([
   {name: 'Florida'},
   {name: 'Georgia'},
   {name: 'Hawaii'},
-  {name: 'Idaha'},
+  {name: 'Idaho'},
   {name: 'Illinois'},
   {name: 'Indiana'},
   {name: 'Iowa'},
@@ -61,17 +61,17 @@ states = State.create([
   {name: 'United States - Total'},
   ])
 
-# crimes = Crime.create([
-#   {name: ''}
-#   {name: ''}
-#   {name: ''}
-#   {name: ''}
-#   {name: ''}
-#   {name: ''}
-#   {name: ''}
-#   {name: ''}
-#   {name: ''}
-#   ])
+crimes = Crime.create([
+  {name: 'violent_crime_rate'},
+  {name: 'murder_and_nonnegligent_manslaughter_rate'},
+  {name: 'forcible_rape_rate'},
+  {name: 'robbery_rate'},
+  {name: 'aggravated_assault_rate'},
+  {name: 'property_crime_rate'},
+  {name: 'burglary_rate'},
+  {name: 'larceny_theft_rate'},
+  {name: 'motor_vehicle_theft_rate'}
+  ])
 
 years = Year.create([
   {year: 1960},
@@ -126,5 +126,5 @@ years = Year.create([
   {year: 2009},
   {year: 2010},
   {year: 2011},
-  {year: 2012},  
+  {year: 2012},
   ])
