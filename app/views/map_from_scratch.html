@@ -10,7 +10,7 @@ var map = new Datamap({
     geographyConfig: {
            popupTemplate: function(geo, data) {
                return ['<div class="hoverinfo"><strong>',
-                      'State Name:\n',
+                      geo.properties.name +
                       'Burglary!\n',
                       'Fire!\n',
                       'Kill!\n',
