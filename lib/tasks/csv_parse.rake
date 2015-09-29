@@ -2,7 +2,7 @@ require 'csv'
 
 desc "Imports a CSV file into an ActiveRecord table"
 task :import, [:filename] => :environment do
-  csv_text = File.read('/Users/ryanponte/Development/Rapsheet/vendor/crime_stats.csv')
+  csv_text = File.read('vendor/crime_stats.csv')
   csv = CSV.parse(csv_text, :headers => true)
 
   csv.each do |row|
