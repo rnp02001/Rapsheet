@@ -19,7 +19,7 @@ states = State.create([
   {name: 'Florida'},
   {name: 'Georgia'},
   {name: 'Hawaii'},
-  {name: 'Idaha'},
+  {name: 'Idaho'},
   {name: 'Illinois'},
   {name: 'Indiana'},
   {name: 'Iowa'},
@@ -62,14 +62,14 @@ states = State.create([
   ])
 
 crimes = Crime.create([
-  {name: 'violent_crime_rate'}
-  {name: 'murder_and_nonnegligent_manslaughter_rate'}
-  {name: 'forcible_rape_rate'}
-  {name: 'robbery_rate'}
-  {name: 'aggravated_assault_rate'}
-  {name: 'property_crime_rate'}
-  {name: 'burglary_rate'}
-  {name: 'larceny_theft_rate'}
+  {name: 'violent_crime_rate'},
+  {name: 'murder_and_nonnegligent_manslaughter_rate'},
+  {name: 'forcible_rape_rate'},
+  {name: 'robbery_rate'},
+  {name: 'aggravated_assault_rate'},
+  {name: 'property_crime_rate'},
+  {name: 'burglary_rate'},
+  {name: 'larceny_theft_rate'},
   {name: 'motor_vehicle_theft_rate'}
   ])
 
