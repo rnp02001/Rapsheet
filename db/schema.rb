@@ -19,15 +19,8 @@ ActiveRecord::Schema.define(version: 20150929181325) do
   create_table "annual_state_crime_rates", force: :cascade do |t|
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
-    t.integer  "state_id"
-    t.integer  "year_id"
-    t.integer  "crime_id"
     t.decimal  "rate",       precision: 6, scale: 1
   end
-
-  add_index "annual_state_crime_rates", ["crime_id"], name: "index_annual_state_crime_rates_on_crime_id", using: :btree
-  add_index "annual_state_crime_rates", ["state_id"], name: "index_annual_state_crime_rates_on_state_id", using: :btree
-  add_index "annual_state_crime_rates", ["year_id"], name: "index_annual_state_crime_rates_on_year_id", using: :btree
 
   create_table "crimes", force: :cascade do |t|
     t.string   "name"
