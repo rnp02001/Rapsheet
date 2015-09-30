@@ -128,3 +128,4 @@ years = Year.create([
   {year: 2011},
   {year: 2012},
   ])
+  puts 'Seeded'
