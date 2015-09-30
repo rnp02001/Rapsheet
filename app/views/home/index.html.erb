@@ -11,5 +11,10 @@
   </div>
 <% end %>
 
-<%= render 'slidebar' %>
+<div class="container" style="position: relative; width: 85%; height: 85%;">
+  <label for="year">Year</label>
+  <input type="range" min="1960" max="2012" value="1960" id="fader" step="1" oninput="outputUpdate(value)">
+  <output for="fader" id="year">1960</output>
+</div>
+
 <div id="container" style="position: relative; width: 85%; height: 85%;"></div>

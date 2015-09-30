@@ -44,3 +44,7 @@ $(document).ready(function() {
           map.resize();
       });
   });
+
+  function outputUpdate(year) {
+  	document.querySelector('#year').value = year;
+  }
