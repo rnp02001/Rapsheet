@@ -11,12 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< Updated upstream
-
-ActiveRecord::Schema.define(version: 20150930151829) do
-=======
 ActiveRecord::Schema.define(version: 20150930173716) do
->>>>>>> Stashed changes
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,9 +19,6 @@ ActiveRecord::Schema.define(version: 20150930173716) do
   create_table "annual_state_crime_rates", force: :cascade do |t|
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
-    t.integer  "state_id"
-    t.integer  "year_id"
-    t.integer  "crime_id"
     t.decimal  "rate",       precision: 6, scale: 1
     t.integer  "state_id"
     t.integer  "year_id"
