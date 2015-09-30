@@ -25,3 +25,15 @@ var map = new Datamap({
         map.resize();
     });
   });
+
+$(document).ready(function(){
+  $(".login").click(function(){
+    $("#logged-out").click(function(e){
+      $("#logged-in").replace();
+    });
+
+    $("#logged-in").click(function(e){
+      $("#logged-out").replace();
+    });
+  });
+});
