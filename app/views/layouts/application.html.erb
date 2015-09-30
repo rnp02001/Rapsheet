@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Rapsheet</title>
+  <%= include_gon %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
@@ -9,7 +10,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-adfadsfs
 <%= yield %>
 
 </body>
