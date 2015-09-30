@@ -11,7 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150930145022) do
+
+ActiveRecord::Schema.define(version: 20150930151829) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +24,9 @@ ActiveRecord::Schema.define(version: 20150930145022) do
     t.integer  "year_id"
     t.integer  "crime_id"
     t.decimal  "rate",       precision: 6, scale: 1
+    t.integer  "state_id"
+    t.integer  "year_id"
+    t.integer  "crime_id"
   end
 
   add_index "annual_state_crime_rates", ["crime_id"], name: "index_annual_state_crime_rates_on_crime_id", using: :btree
