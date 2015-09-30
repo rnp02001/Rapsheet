@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150929181325) do
+ActiveRecord::Schema.define(version: 20150930145022) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,15 @@ ActiveRecord::Schema.define(version: 20150929181325) do
   create_table "annual_state_crime_rates", force: :cascade do |t|
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
+    t.integer  "state_id"
+    t.integer  "year_id"
+    t.integer  "crime_id"
     t.decimal  "rate",       precision: 6, scale: 1
   end
+
+  add_index "annual_state_crime_rates", ["crime_id"], name: "index_annual_state_crime_rates_on_crime_id", using: :btree
+  add_index "annual_state_crime_rates", ["state_id"], name: "index_annual_state_crime_rates_on_state_id", using: :btree
+  add_index "annual_state_crime_rates", ["year_id"], name: "index_annual_state_crime_rates_on_year_id", using: :btree
 
   create_table "crimes", force: :cascade do |t|
     t.string   "name"
@@ -33,6 +40,26 @@ ActiveRecord::Schema.define(version: 20150929181325) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "username"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
   create_table "years", force: :cascade do |t|
     t.integer  "year"
