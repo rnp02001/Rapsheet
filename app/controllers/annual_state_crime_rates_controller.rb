@@ -8,6 +8,14 @@ class AnnualStateCrimeRatesController < ApplicationController
     binding.pry
     gon.min = range.min
     gon.max = range.max
+    #do we want an average too?
+  end
+
+  def year_rates
+    gon.year_data = AnnualStateCrimeRate.rates_for_year_and_crime(params["year_id"], params["crime_id"])
+
+
+
   end
 
 end
