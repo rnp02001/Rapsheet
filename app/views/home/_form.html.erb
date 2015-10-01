@@ -1,5 +1,8 @@
-<%= form_tag("/annual_state_crime_rates/range_year_crime/:year_id/:crime_id", method: "get") do %>
-  <%= radio_button_tag(:crime_id, "1") %>
-  <%= label_tag(:crime_id_1, "Violent Crime") %>
+<%= form_tag("/range_year_crime", method: "post") do %>
+<% @crimes.each do |c|%>
+  <%=radio_button_tag :id, c.id %>
+  <%=label_tag c.name%>
+  <br>
+<%end%>
   <%= submit_tag("Submit Crime") %>
 <% end %>
