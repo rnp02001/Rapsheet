@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150930173716) do
+ActiveRecord::Schema.define(version: 20151001151140) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "annual_state_crime_rates", force: :cascade do |t|
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
-    t.decimal  "rate",       precision: 6, scale: 1
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "rate"
     t.integer  "state_id"
     t.integer  "year_id"
     t.integer  "crime_id"
