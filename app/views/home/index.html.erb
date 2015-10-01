@@ -1,4 +1,4 @@
-<div class="text-right">
+<div class="text-right" style="padding-right: 10px;">
   <% if user_signed_in? %>
     <div class="login">
       Logged in as <strong><%= current_user.username %></strong><br>
@@ -14,25 +14,30 @@
 </div>
 
 <div class="container" style="position: relative; width: 85%; height: 85%;">
-  <div class="container" style="position: relative; width: 85%; height: 85%;">
-    <label for="year">Year</label>
-    <input type="range" min="1960" max="2012" value="1960" id="fader" step="1" oninput="outputUpdate(value)">
-    <output for="fader" id="year">1960</output>
-  </div>
 
-  <div class="container" style="position: relative; width: 85%; height: 85%;">
-    <div class="" >
-      <b>Crime Data</b><br/>
-      <input type="radio" name="radios1" value="1">Violent Crime
-      <input type="radio" name="radios1" value="2">Murder and Non-negligent Manslaughter
-      <input type="radio" name="radios1" value="3">Forcible Rape
-      <input type="radio" name="radios1" value="4">Robbery
-      <input type="radio" name="radios1" value="5">Aggravated Assault</br>
-      <input type="radio" name="radios1" value="6">Property Crime
-      <input type="radio" name="radios1" value="7">Burglary
-      <input type="radio" name="radios1" value="8">Larceny Theft
-      <input type="radio" name="radios1" value="9">Motor Vehicle Theft
+
+  <div class="jumbotron" >
+    <div class="container" style="position: relative; width: 85%; height: 85%;">
+      <label for="year">Year</label>
+      <input type="range" min="1960" max="2012" value="1960" id="fader" step="1" oninput="outputUpdate(value)">
+      <output for="fader" id="year">1960</output>
     </div>
-    <div class="" id="container"></div>
+    <div class="row">
+      <div class="col-xs-3" >
+
+      </br></br></br></br>
+        <b>Select Crime Rate</b><br/>
+        <input type="radio" name="radios1" value="1">Violent Crime</br>
+        <input type="radio" name="radios1" value="2">Murder/Manslaughter</br>
+        <input type="radio" name="radios1" value="3">Forcible Rape</br>
+        <input type="radio" name="radios1" value="4">Robbery</br>
+        <input type="radio" name="radios1" value="5">Aggravated Assault</br>
+        <input type="radio" name="radios1" value="6">Property Crime</br>
+        <input type="radio" name="radios1" value="7">Burglary</br>
+        <input type="radio" name="radios1" value="8">Larceny Theft</br>
+        <input type="radio" name="radios1" value="9">Motor Vehicle Theft</br>
+      </div>
+      <div class="col-xs-9" id="container"></div>
+    </div>
   </div>
 </div>
