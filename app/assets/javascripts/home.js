@@ -47,4 +47,5 @@ $(document).ready(function() {
 
   function outputUpdate(year) {
   	document.querySelector('#year').value = year;
+    $("#form_year").val(year);
   }
