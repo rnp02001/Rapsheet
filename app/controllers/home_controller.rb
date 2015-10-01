@@ -4,6 +4,4 @@ class HomeController < ApplicationController
     gon.rate = AnnualStateCrimeRate.limit(10)
   end
 
-
-
 end
