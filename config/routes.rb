@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :years
 
   resources :crimes
+    get '/crimes/rates/:id', to: 'crimes#rate'  
 
   resources :states
 
