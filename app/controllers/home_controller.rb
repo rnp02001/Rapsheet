@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
 
   def index
-    gon.rate = AnnualStateCrimeRate.limit(10)
+    @crimes = Crime.all
+    binding.pry
   end
 
 end

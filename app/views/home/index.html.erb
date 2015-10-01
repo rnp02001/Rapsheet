@@ -19,15 +19,16 @@
   <div class="jumbotron" >
     <div class="container" style="position: relative; width: 85%; height: 85%;">
       <label for="year">Year</label>
-      <input type="range" min="1960" max="2012" value="1960" id="fader" step="1" oninput="outputUpdate(value)">
-      <output for="fader" id="year">1960</output>
+      <input type="range" min="1965" max="2012" value="1965" id="fader" step="1" oninput="outputUpdate(value)">
+      <output for="fader" id="year">1965</output>
     </div>
     <div class="row">
       <div class="col-xs-3" >
 
       </br></br></br></br>
         <b>Select Crime Rate</b><br/>
-        <input type="radio" name="radios1" value="1">Violent Crime</br>
+        <%= render "home/form" %>
+        <!-- <input type="radio" name="radios1" value="1">Violent Crime</br>
         <input type="radio" name="radios1" value="2">Murder/Manslaughter</br>
         <input type="radio" name="radios1" value="3">Forcible Rape</br>
         <input type="radio" name="radios1" value="4">Robbery</br>
@@ -35,7 +36,7 @@
         <input type="radio" name="radios1" value="6">Property Crime</br>
         <input type="radio" name="radios1" value="7">Burglary</br>
         <input type="radio" name="radios1" value="8">Larceny Theft</br>
-        <input type="radio" name="radios1" value="9">Motor Vehicle Theft</br>
+        <input type="radio" name="radios1" value="9">Motor Vehicle Theft</br> -->
       </div>
       <div class="col-xs-9" id="container"></div>
     </div>
