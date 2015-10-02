@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  #root 'home#index'
-  root to: 'comments#index'
+  root 'home#index'
+  #root to: 'comments#index'
 
   devise_for :users
 
