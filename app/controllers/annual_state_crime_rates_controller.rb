@@ -12,7 +12,6 @@ class AnnualStateCrimeRatesController < ApplicationController
     gon.global.year_data = AnnualStateCrimeRate.rates_for_year_and_crime(params["form_year"], params["id"])
 
     @crimes = Crime.all
-    binding.pry
     redirect_to root_path
   end
 

@@ -1,4 +1,4 @@
-state,year,violent_crime_rate,murder_and_nonnegligent_manslaughter_rate,forcible_rape_rate,robbery_rate,aggravated_assault_rate,property_crime_rate,burglary_rate,larceny_theft_rate,motor_vehicle_theft_rate
+state,year,violent_crime,homicide,forcible_rape,robbery,assault,property_crime,burglary,larceny,auto_theft
 Alabama,1960,186.6,12.4,8.6,27.5,138.1,1035.4,355.9,592.1,87.3
 Alabama,1961,168.5,12.9,7.6,19.1,128.9,985.5,339.3,569.4,76.8
 Alabama,1962,157.3,9.4,6.5,22.5,119,1067,349.1,634.5,83.4
