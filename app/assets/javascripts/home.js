@@ -5,7 +5,7 @@ $(document).ready(function() {
 
   var paletteScale = d3.scale.linear()
      .domain([gon.global.min, gon.global.max])
-     .range(["white", "black"]);
+     .range(["white", "red"]);
 
   var dataset = {};
 
