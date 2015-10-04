@@ -4,9 +4,7 @@ $(document).ready(function() {
 });
 
   var mapProcess = function(){
-
-    console.log('map process called');
-
+    // console.log('mapProcess');
     var alertFunction = alert("other file");
 
     var series = gon.global.year_data;
