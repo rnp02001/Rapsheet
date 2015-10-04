@@ -17,7 +17,7 @@ $(document).ready(function() {
   });
 
   var map = new Datamap({
-      element: document.getElementById('container'),
+      element: document.getElementById('map-container'),
       scope: 'usa',
       data: dataset,
       responsive: true,
