@@ -1,23 +1,23 @@
 <%= render 'home/login' %>
 
-<div class="container" style="position: relative; width: 85%; height: 85%;">
+<div class="container">
 
 
-  <div class="jumbotron" >
+  <div class="jumbotron">
     <div class="row">
+      <div class="col-xs-2" >
+        <b>Select Crime Rate</b><br/>
+        <%= render "home/form" %>
+      </div>
       <div class="container col-xs-8" style="position: relative; width: 75%;">
         <label for="year">Year</label>
         <input type="range" min="1965" max="2012" value="1965" id="fader" step="1" oninput="outputUpdate(value)">
         <output for="fader" id="year">1965</output>
       </div>
-      <div class="col-xs-2" >
-        <b>Select Crime Rate</b><br/>
-        <%= render "home/form" %>
-      </div>
     </div>
     <div class="row">
 
-      <div class="col-xs-12" id="map-container"></div>
+      <%= render 'home/map' %>
     </div>
   </div>
 </div>

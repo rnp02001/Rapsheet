@@ -13,6 +13,9 @@ class AnnualStateCrimeRatesController < ApplicationController
 
     @crimes = Crime.all
     redirect_to root_path
+    # respond_to do |format|
+    #   format.js { render 'home/index'}
+    # end
   end
 
 
