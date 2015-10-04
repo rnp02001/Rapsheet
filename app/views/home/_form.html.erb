@@ -1,4 +1,4 @@
-<%= form_tag("/range_year_crime", method: "post") do %>
+<%= form_tag("/range_year_crime", id: "year_crime_form", method: "post", remote: true) do %>
 <% @crimes.each do |c|%>
   <%=radio_button_tag :id, c.id %>
   <%=label_tag c.name%>
