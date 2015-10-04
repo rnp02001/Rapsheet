@@ -24,7 +24,7 @@ $(document).ready(function() {
       geographyConfig: {
         highlightFillColor: function(geo) {
             return geo['fillColor'] || '#F5F5F5';
-           },
+          },
              popupTemplate: function(geo, data) {
                  return ['<div class="hoverinfo"><strong>',
                         geo.properties.name +
@@ -43,6 +43,7 @@ $(document).ready(function() {
       window.addEventListener('resize', function() {
           map.resize();
       });
+
   });
 
   function outputUpdate(year) {

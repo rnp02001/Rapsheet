@@ -1,0 +1,14 @@
+<div class="text-right" style="padding-right: 10px;">
+  <% if user_signed_in? %>
+    <div class="login">
+      Logged in as <strong><%= current_user.username %></strong><br>
+      <%= link_to 'Edit profile | ', edit_user_registration_path %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    </div>
+  <% else %>
+    <div class="login">
+      <%= link_to "Sign Up | ", new_user_registration_path %>
+      <%= link_to "Login", new_user_session_path %>
+    </div>
+  <% end %>
+</div>
