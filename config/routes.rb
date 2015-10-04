@@ -12,6 +12,6 @@ Rails.application.routes.draw do
 
   resources :states
 
-  resources :comments, only: [:index, :new, :create]
+  resources :comments, only: [:new, :create]
 
 end

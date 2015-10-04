@@ -2,6 +2,8 @@ class HomeController < ApplicationController
 
   def index
     gon.rate = AnnualStateCrimeRate.limit(10)
+    @comment = Comment.new
+    @comments = Comment.all 
   end
   #
   # def self.year(year_id, crime_id)
