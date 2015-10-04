@@ -1,4 +1,4 @@
-<%= form_tag("/range_year_crime", method: "post") do %>
+<%= form_tag("/range_year_crime", method: "post", remote: true) do %>
 
   <%= select_tag "crime", options_from_collection_for_select(@crimes, "id", "name") %>
 

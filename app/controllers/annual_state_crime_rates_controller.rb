@@ -10,11 +10,10 @@ class AnnualStateCrimeRatesController < ApplicationController
     gon.global.min = range.min
     gon.global.max = range.max
     gon.global.year_data = AnnualStateCrimeRate.rates_for_year_and_crime(params["form_year"], params["crime"])
-    
+
     @crimes = Crime.all
-    redirect_to root_path
+    respond_to do |format|
+      format.js {render 'home/index'}
+    end
   end
-
-
-
 end
