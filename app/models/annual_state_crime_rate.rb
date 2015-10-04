@@ -12,7 +12,6 @@ class AnnualStateCrimeRate < ActiveRecord::Base
   end
 
   def self.rates_for_year_and_crime(year_id, crime_id)
-    binding.pry
     year_raw_data = AnnualStateCrimeRate.all.where(year_id: Year.find_by(year: year_id.to_i).id, crime_id: crime_id)
     year_raw_data.map {|item| [item.state.abbr, item.rate]}
   end
