@@ -1,0 +1,9 @@
+<%= form_tag("/range_year_crime", method: "post") do %>
+  <% @crimes.each do |c|%>
+    <%=radio_button_tag :id, c.id %>
+    <%=label_tag c.name%>
+    <br>
+    <%end%>
+    <%= hidden_field_tag 'form_year' %>
+    <%= submit_tag("Submit Crime") %>
+<% end %>
