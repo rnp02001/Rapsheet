@@ -11,8 +11,9 @@ task :import, [:filename] => :environment do
     year = Year.find_by(year: csv_hash["year"])
     csv_hash.each do |key, value|
       if (key != "state") && (key != "year")
-        AnnualStateCrimeRate.create!(rate: value, state_id: state.id, year_id: year.id, crime_id: Crime.find_by(name: key).id)
+        AnnualStateCrimeRate.create!(rate: ((value.to_f * 10).to_i), state_id: state.id, year_id: year.id, crime_id: Crime.find_by(name: key).id)
       end
     end
   end
+  puts "Great job! Thanks for your patience. You imported #{AnnualStateCrimeRate.all.count} items."
 end
