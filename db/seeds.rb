@@ -62,15 +62,15 @@ states = State.create([
 
 
 crimes = Crime.create([
-  {name: 'violent_crime'},
-  {name: 'homicide'},
-  {name: 'forcible_rape'},
-  {name: 'robbery'},
-  {name: 'assault'},
-  {name: 'property_crime'},
-  {name: 'burglary'},
-  {name: 'larceny'},
-  {name: 'auto_theft'}
+  {name: 'Violent Crime'},
+  {name: 'Homicide'},
+  {name: 'Forcible Rape'},
+  {name: 'Robbery'},
+  {name: 'Assault'},
+  {name: 'Property Crime'},
+  {name: 'Burglary'},
+  {name: 'Larceny'},
+  {name: 'Auto Theft'}
   ])
 
 
