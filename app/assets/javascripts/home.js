@@ -1,4 +1,3 @@
-
 $(document).ready(function() {mapProcess()});
 
   var mapProcess = function() {
