@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem "d3-rails"
 gem 'underscore-rails'
 gem 'gon'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

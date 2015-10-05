@@ -1,9 +1,9 @@
-<%= form_tag("/range_year_crime", id: "year_crime_form", method: "post", remote: true) do %>
-<% @crimes.each do |c|%>
-  <%=radio_button_tag :id, c.id %>
-  <%=label_tag c.name%>
+<%= form_tag("/range_year_crime", method: "post", remote: true) do %>
+
+  <%= select_tag "crime", options_from_collection_for_select(@crimes, "id", "name") %>
+
   <br>
-<%end%>
-  <%= hidden_field_tag 'form_year' %>
+
+  <%= hidden_field_tag 'form_year', value=1965 %>
   <%= submit_tag("Submit Crime") %>
 <% end %>
