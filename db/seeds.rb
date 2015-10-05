@@ -15,7 +15,6 @@ states = State.create([
   {name: 'Colorado', abbr: 'CO'},
   {name: 'Connecticut', abbr: 'CT'},
   {name: 'Delaware', abbr: 'DE'},
-  {name: 'District of Columbia', abbr: 'DC'},
   {name: 'Florida', abbr: 'FL'},
   {name: 'Georgia', abbr: 'GA'},
   {name: 'Hawaii', abbr: 'HI'},
