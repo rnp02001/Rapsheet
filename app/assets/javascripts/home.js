@@ -27,8 +27,9 @@ var dataManipulators =  function(minimums, maximums, states){
 
   series.forEach(function(item){ //
         var iso = item[0],
-                value = item[1];
-        dataset[iso] = { numberOfThings: value, fillColor: paletteScale(value) };
+          value = item[1],
+          rank = item[2];
+        dataset[iso] = { numberOfThings: value, fillColor: paletteScale(value), ranking: rank };
     });
     us_map(dataset);
 };
@@ -45,12 +46,7 @@ var dataManipulators =  function(minimums, maximums, states){
           },
              popupTemplate: function(geo, data) {
                  return ['<div class="hoverinfo"><strong>',
-                        geo.properties.name + "<br>" + $("#crime :selected").text() + '<br>' + (data.numberOfThings/10) + " per 100,000",
-
-
-
-
-
+                         geo.properties.name + "<br>"  + $("#crime :selected").text() + '<br>' + (data.numberOfThings/10) + " per 100,000" + '<br>' + (data.ranking + 1) + ' most dangerous state',
                         '</strong></div>'].join('');
                         //  'Number of things in ' + geo.properties.name,
                         //  ': ' + data.numberOfThings,
