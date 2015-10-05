@@ -11,7 +11,7 @@ class AnnualStateCrimeRatesController < ApplicationController
     gon.global.max = range.max
     @maximums = range.max
     gon.global.year_data = AnnualStateCrimeRate.rates_for_year_and_crime(params["form_year"], params["crime"])
-    @states = AnnualStateCrimeRate.rates_for_year_and_crime(params["form_year"], params["crime"])
+    @states = AnnualStateCrimeRate.rates_for_year_and_crime(params["form_year"], params["crime"]).to_json.html_safe
     @crimes = Crime.all
     respond_to do |format|
       format.js { render 'home/index' }

@@ -1,7 +1,14 @@
 
   $("#map-container").remove();
   $(".holding_div").append('<div id="map-container"></div>');
-  var minimums = <%= @minimums %>;
-  var maximums = <%= @maximums %>;
+
+  var minimums = 1;
+  var maximums = 1;
+    <%= @minimums %>
+    <%= @maximums %>
   var states = <%= @states %>;
-  dataManipulators(minimums, maximums, states);
+
+
+  debugger;
+  dataManipulators();
+  alerter("hi");
