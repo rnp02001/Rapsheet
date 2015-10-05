@@ -56,8 +56,7 @@ states = State.create([
   {name: 'Washington', abbr: 'WA'},
   {name: 'West Virginia', abbr: 'WV'},
   {name: 'Wisconsin', abbr: 'WI'},
-  {name: 'Wyoming', abbr: 'WY'},
-  {name: 'United States - Total', abbr: 'US'},
+  {name: 'Wyoming', abbr: 'WY'}
   ])
 
 
@@ -127,7 +126,7 @@ years = Year.create([
   {year: 2009},
   {year: 2010},
   {year: 2011},
-  {year: 2012},
+  {year: 2012}
   ])
 
   puts "#{State.all.count} states now exist"
