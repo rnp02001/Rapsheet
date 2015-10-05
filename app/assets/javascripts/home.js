@@ -46,8 +46,7 @@ var dataManipulators =  function(minimums, maximums, states){
           },
              popupTemplate: function(geo, data) {
                  return ['<div class="hoverinfo"><strong>',
-                         geo.properties.name + "<br>"  + $("#crime :selected").text() + '<br>' + (data.numberOfThings/10) + " per 100,000" + '<br>' + (data.ranking + 1) + ' most dangerous state',
-
+                         geo.properties.name + "<br>"  + "#" + (data.ranking + 1) + ' in ' + $("#crime :selected").text() + '<br>' + (data.numberOfThings/10) + " Incidents" + '<br>' +  'per 100,000 Residents',
                         '</strong></div>'].join('');
                         //  'Number of things in ' + geo.properties.name,
                         //  ': ' + data.numberOfThings,
@@ -58,9 +57,9 @@ var dataManipulators =  function(minimums, maximums, states){
       //go to https://github.com/markmarkoh/datamaps/blob/master/README.md#custom-popup-on-hover for info on hover-over -- reccomends underscore template
       });
     };
-    //   window.addEventListener('resize', function() {
-    //       us_map.resize();
-    // });
+  d3.select(window).on('resize', function() {
+      map.resize();
+  });
 
   function outputUpdate(year) {
   	document.querySelector('#year').value = year;
