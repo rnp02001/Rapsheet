@@ -56,21 +56,20 @@ states = State.create([
   {name: 'Washington', abbr: 'WA'},
   {name: 'West Virginia', abbr: 'WV'},
   {name: 'Wisconsin', abbr: 'WI'},
-  {name: 'Wyoming', abbr: 'WY'},
-  {name: 'United States - Total', abbr: 'US'},
+  {name: 'Wyoming', abbr: 'WY'}
   ])
 
 
 crimes = Crime.create([
-  {name: 'violent_crime'},
-  {name: 'homicide'},
-  {name: 'forcible_rape'},
-  {name: 'robbery'},
-  {name: 'assault'},
-  {name: 'property_crime'},
-  {name: 'burglary'},
-  {name: 'larceny'},
-  {name: 'auto_theft'}
+  {name: 'Violent Crime'},
+  {name: 'Homicide'},
+  {name: 'Forcible Rape'},
+  {name: 'Robbery'},
+  {name: 'Assault'},
+  {name: 'Property Crime'},
+  {name: 'Burglary'},
+  {name: 'Larceny'},
+  {name: 'Auto Theft'}
   ])
 
 
@@ -127,7 +126,7 @@ years = Year.create([
   {year: 2009},
   {year: 2010},
   {year: 2011},
-  {year: 2012},
+  {year: 2012}
   ])
 
   puts "#{State.all.count} states now exist"
