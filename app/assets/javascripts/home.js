@@ -10,6 +10,8 @@ var dataManipulators =  function(){
      .domain([gon.global.min, gon.global.max])
      .range(["white", "red"]);
 
+  var data = gon.global.year_data;
+
   var dataset = {};
 
   series.forEach(function(item){ //
@@ -18,20 +20,6 @@ var dataManipulators =  function(){
               value = item[1];
       dataset[iso] = { numberOfThings: value, fillColor: paletteScale(value) };
   });
-
-  var map = new Datamap({
-
-  var data = gon.global.year_data;
-
-  var dataset = {};
-
-  series.forEach(function(item){ //
-        var iso = item[0],
-                value = item[1];
-        dataset[iso] = { numberOfThings: value, fillColor: paletteScale(value) };
-    });
-    us_map(dataset);
-};
 
   var us_map = function(dataset){
 
@@ -58,17 +46,17 @@ var dataManipulators =  function(){
              }
        }
       //go to https://github.com/markmarkoh/datamaps/blob/master/README.md#custom-popup-on-hover for info on hover-over -- reccomends underscore template
-      });
-      window.addEventListener('resize', function() {
-          map.resize();
-      });
+    });
+      // window.addEventListener('resize', function() {
+      //     map.resize();
+      // });
 
   };
 
 
       //go to https://github.com/markmarkoh/datamaps/blob/master/README.md#custom-popup-on-hover for info on hover-over -- reccomends underscore template
-      });
-    };
+      };
+    //};
     //   window.addEventListener('resize', function() {
     //       us_map.resize();
     // });
