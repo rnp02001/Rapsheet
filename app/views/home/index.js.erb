@@ -1,8 +1,7 @@
+$("#map-container").empty();
 
-  $("#map-container").empty();
+var minimums =  <%= @minimums %>;
+var maximums =  <%= @maximums %>;
+var states = <%= @states %>;
 
-  var minimums =  <%= @minimums %>;
-  var maximums =  <%= @maximums %>;
-  var states = <%= @states %>;
-
-  dataManipulators(minimums, maximums, states);
+dataManipulators(minimums, maximums, states);

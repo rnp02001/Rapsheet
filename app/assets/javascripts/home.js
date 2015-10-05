@@ -36,7 +36,6 @@ var dataManipulators =  function(minimums, maximums, states){
 
   var us_map = function(dataset){
       new Datamap({
-
       element: document.getElementById('map-container'),
       scope: 'usa',
       data: dataset,
@@ -48,6 +47,7 @@ var dataManipulators =  function(minimums, maximums, states){
              popupTemplate: function(geo, data) {
                  return ['<div class="hoverinfo"><strong>',
                          geo.properties.name + "<br>"  + $("#crime :selected").text() + '<br>' + (data.numberOfThings/10) + " per 100,000" + '<br>' + (data.ranking + 1) + ' most dangerous state',
+
                         '</strong></div>'].join('');
                         //  'Number of things in ' + geo.properties.name,
                         //  ': ' + data.numberOfThings,
@@ -65,4 +65,4 @@ var dataManipulators =  function(minimums, maximums, states){
   function outputUpdate(year) {
   	document.querySelector('#year').value = year;
     $("#form_year").val(year);
-  }
+  };
