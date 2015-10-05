@@ -1,6 +1,18 @@
-// $(document).ready(function(){
-//     dataManipulators();
-// });
+$(document).ready(function(){
+  $("#crime_form").submit();
+
+  $(function() {
+   $("#crime_form").change(function() {
+     $("#crime_form").submit();
+   });
+
+   $(function() {
+    $("#year").change(function() {
+      $("#crime_form").submit();
+    });
+  });
+ });
+});
 
 
 
