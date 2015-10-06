@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'home#index'
 
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'users/sessions' }
 
   resources :annual_state_crime_rates
 
@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   resources :states
 
   resources :comments, only: [:new, :create]
+
+  resources :users, :only => [:index, :show, :update]
 
 end

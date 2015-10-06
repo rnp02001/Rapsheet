@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  // debugger;
   $("#crime_form").submit();
 
   $(function() {
