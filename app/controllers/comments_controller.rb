@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   def index
-    @comments = Comment.all
+    @comments = Comment.hash_tree 
   end
 
   def new
