@@ -4,14 +4,11 @@ class CommentsController < ApplicationController
   end
 
   def new
-    binding.pry
     @comment = Comment.new(parent_id: params[:parent_id])
   end
 
   def create
-    binding.pry
     if params[:comment][:parent_id].to_i > 0
-      binding.pry
     parent = Comment.find_by_id(params[:comment].delete(:parent_id))
     @comment = parent.children.build(comment_params)
     else
