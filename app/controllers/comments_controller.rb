@@ -7,12 +7,19 @@ class CommentsController < ApplicationController
     @comment = Comment.new(parent_id: params[:parent_id])
   end
 
+  def show
+    @comments = Comment.all
+    respond_to do |format|
+      format.js { render :comment_show }
+    end
+  end
+
   def create
     if params[:comment][:parent_id].to_i > 0
-    parent = Comment.find_by_id(params[:comment].delete(:parent_id))
-    @comment = parent.children.build(comment_params)
+      parent = Comment.find_by_id(params[:comment].delete(:parent_id))
+      @comment = parent.children.build(comment_params)
     else
-    @comment = Comment.new(comment_params)
+      @comment = Comment.new(comment_params)
     end
 
     if @comment.save
