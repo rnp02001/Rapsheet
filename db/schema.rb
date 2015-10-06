@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151001153703) do
+ActiveRecord::Schema.define(version: 20151006013019) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,12 +29,22 @@ ActiveRecord::Schema.define(version: 20151001153703) do
   add_index "annual_state_crime_rates", ["state_id"], name: "index_annual_state_crime_rates_on_state_id", using: :btree
   add_index "annual_state_crime_rates", ["year_id"], name: "index_annual_state_crime_rates_on_year_id", using: :btree
 
+  create_table "comment_hierarchies", id: false, force: :cascade do |t|
+    t.integer "ancestor_id",   null: false
+    t.integer "descendant_id", null: false
+    t.integer "generations",   null: false
+  end
+
+  add_index "comment_hierarchies", ["ancestor_id", "descendant_id", "generations"], name: "comment_anc_desc_udx", unique: true, using: :btree
+  add_index "comment_hierarchies", ["descendant_id"], name: "comment_desc_idx", using: :btree
+
   create_table "comments", force: :cascade do |t|
     t.string   "title"
     t.string   "author"
     t.text     "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "parent_id"
   end
 
   create_table "crimes", force: :cascade do |t|
