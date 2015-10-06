@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   resources :states
 
-  resources :comments, only: [:new, :create]
+  resources :comments, only: [:new, :index, :create]
+  get '/comments/new/(:parent_id)', to: 'comments#new'#, as: :new_comment
 
 end
