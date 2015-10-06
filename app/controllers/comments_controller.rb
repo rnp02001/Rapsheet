@@ -5,6 +5,11 @@ class CommentsController < ApplicationController
 
   def new
     @comment = Comment.new(parent_id: params[:parent_id])
+    # respond_to do |format|
+    #   format.html { render(:text => "not implemented") }
+    #   format.js { render 'comment_new' }
+    # end
+    render "comment_new"
   end
 
   def show
