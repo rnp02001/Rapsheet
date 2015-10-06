@@ -1,1 +1,7 @@
+<% if @comment.parent_id %>
+  var location = $("#id-'<%= j render "@comment.parent_id.to_json" %>'");
+<% else %>
+  var location = $(".comment-div");
+<% end %>
+
 $(".comment-div").append("<%= j render "comment_new" %>")
