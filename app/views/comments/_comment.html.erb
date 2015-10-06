@@ -1,5 +1,8 @@
-<% if @comment.parent_id.exists? %>
-<div class="well">
+
+<% if !!comment.parent_id %>
+  <div class="well replies">
+<% else %> <div class="well">
+<% end %>
   <h2><%= comment.title %></h2>
   <p class="text-muted">Added by <strong><%= comment.author %></strong> on
     <%= l(comment.created_at, format: '%B, %d %Y %H:%M:%S') %></p>
