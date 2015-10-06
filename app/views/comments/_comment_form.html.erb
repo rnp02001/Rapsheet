@@ -10,7 +10,6 @@
       </ul>
     </div>
   <% end %>
-  <%= binding.pry %>
 
   <div class="form-group">
     <%= f.label :title %>
@@ -27,5 +26,6 @@
     <%= f.text_area :body, class: 'form-control', required: true %>
   </div>
 
+  <%= f.hidden_field :parent_id, value: @comment.parent_id %>
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>
