@@ -1,5 +1,4 @@
-$(document).ready(function(){
-  // debugger;
+$(document).on('ready page:load', function(){
   $("#crime_form").submit();
 
   $(function() {
@@ -14,6 +13,8 @@ $(document).ready(function(){
   });
  });
 });
+
+
 
 
 var dataManipulators =  function(minimums, maximums, states){
