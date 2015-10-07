@@ -7,11 +7,11 @@
         <b>Select Crime Rate</b><br/>
         <%= render "home/crime_rate_form" %>
       </div>
-      <div class='col-xs-1 col-md-2'>
-        <div id='play_button'</div>
-      </div>
-    </div>
-      <div class="col-xs-11 col-md-8" style="position: relative; ">
+      <div class="col-x-1 col-md-1"><%= link_to 'Play', animate_year_path, remote: true, class: 'btn btn-primary btn-md', id: 'play-button' %></div>
+
+      <div class="container col-xs-11 col-md-9" style="position: relative; width: 75%;">
+
+
         <label for="year">Year</label>
         <input type="range" min="1965" max="2012" value="1965" id="fader" step="1" oninput="outputUpdate(value)">
         <output for="fader" id="year">1965</output>

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   post 'range_year_crime', to: 'annual_state_crime_rates#range_year_crime'
 
   resources :years
+  get 'animate_year', to: 'years#animate_year', as: :animate_year
 
   resources :crimes
 
