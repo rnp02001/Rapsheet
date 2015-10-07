@@ -1,15 +1,13 @@
-<%= render 'home/login' %>
-
 <div class="jumbotron" >
   <div class="container">
 
 
     <div class="row">
-      <div class="col-xs-12 col-md-3" >
+      <div class="col-xs-12 col-md-2" >
         <b>Select Crime Rate</b><br/>
         <%= render "home/crime_rate_form" %>
       </div>
-      <div class="container col-xs-12 col-md-9" style="position: relative; width: 75%;">
+      <div class="container col-xs-12 col-md-10" style="position: relative; width: 75%;">
         <label for="year">Year</label>
         <input type="range" min="1965" max="2012" value="1965" id="fader" step="1" oninput="outputUpdate(value)">
         <output for="fader" id="year">1965</output>
@@ -28,10 +26,11 @@
     <h1>Join the discussion</h1>
     <p>Click the button below to start a new thread:</p>
     <p>
-      <%= link_to 'Add new topic', new_comment_path, class: 'btn btn-primary btn-lg' %>
+
+      <%= link_to 'Show Comments',  comments_show_path, remote: true, class: 'btn btn-primary btn-lg' %>
+      <%= link_to 'Add new topic', new_comment_path, remote: true, class: 'btn btn-primary btn-lg' %>
     </p>
   </div>
 </div>
 
-<h1>New Comment</h1>
-<%= render @comments %>
+<div class="comment-div"></div>

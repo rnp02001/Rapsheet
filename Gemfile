@@ -54,3 +54,4 @@ gem 'bootstrap-slider-rails'
 gem 'pry'
 
 gem 'devise'
+gem 'closure_tree'
