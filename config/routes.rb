@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/comments/new/(:parent_id)', to: 'comments#new', as: :new_comment
   get '/comments/show', to: 'comments#show'
   get '/comments/hide', to: 'comments#hide'
+  get '/comments/last_submitted', to: 'comments#last_submitted', as: :last_submitted
 
   resources :users, :only => [:index, :show, :update]
 
