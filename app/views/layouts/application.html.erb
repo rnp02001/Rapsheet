@@ -3,18 +3,24 @@
 <head>
  <title>Rapsheet</title>
  <%= include_gon %>
- <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+ <%= stylesheet_link_tag 'application', media: 'all'%>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
- <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ <%= javascript_include_tag 'application'%>
  <%= csrf_meta_tags %>
 </head>
 <body>
 
   <%= render 'layouts/header' %>
 
- <p class="notice"><%= notice %></p>
- <p class="alert"><%= alert %></p>
+  <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+
+  <%= render 'home/login' %>
 
  <%= yield %>
 

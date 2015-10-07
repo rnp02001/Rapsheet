@@ -15,5 +15,5 @@ task :import, [:filename] => :environment do
       end
     end
   end
-  puts "Great job! Thanks for your patience. You imported #{AnnualStateCrimeRate.all.count} items."
+  puts "You imported #{AnnualStateCrimeRate.all.count} items."
 end

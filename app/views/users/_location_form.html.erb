@@ -1,0 +1,6 @@
+<h4><%= "Enter Your State" %></h4>
+
+<%= form_for @user do |f| %>
+  <%= f.select :state_id, options_from_collection_for_select(@states, "id", "name"), include_blank: true %>
+  <%= f.submit "Submit Location" %>
+<% end %>

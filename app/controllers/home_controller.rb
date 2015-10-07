@@ -1,8 +1,11 @@
 class HomeController < ApplicationController
 
   def index
-    @comments = Comment.all
     @crimes = Crime.all
+
+    @comment = Comment.new
+
+    @comments = Comment.all
   end
 
 end
