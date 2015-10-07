@@ -1,7 +1,7 @@
 
 <% if !!comment.parent_id %>
-  <div class="well replies">
-<% else %> <div class="well">
+  <div class="well replies" id='id-<%=j "#{comment.id}"%>'>
+<% else %> <div class="well" id='id-<%=j "#{comment.id}"%>'>
 <% end %>
   <h2><%= comment.title %></h2>
   <p class="text-muted">Added by <strong><%= comment.author %></strong> on
