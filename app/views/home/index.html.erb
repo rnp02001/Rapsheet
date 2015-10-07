@@ -8,6 +8,7 @@
         <%= render "home/crime_rate_form" %>
       </div>
       <div class="container col-xs-12 col-md-10" style="position: relative; width: 75%;">
+        <%= link_to 'Play', animate_year_path, remote: true, class: 'btn btn-primary btn-lg', id: 'play-button' %>
         <label for="year">Year</label>
         <input type="range" min="1965" max="2012" value="1965" id="fader" step="1" oninput="outputUpdate(value)">
         <output for="fader" id="year">1965</output>
