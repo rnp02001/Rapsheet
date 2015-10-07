@@ -64,3 +64,5 @@ var dataManipulators =  function(minimums, maximums, states){
   	document.querySelector('#year').value = year;
     $("#form_year").val(year);
   }
+
+$("#show-comments").on('click',toggle("#hide-comments"));
