@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
   end
 
   def show
-    @comments = Comment.all
+    @comments = Comment.flatten_nested_hash(Comment.hash_tree)
     respond_to do |format|
       format.js { render :comment_show }
     end
