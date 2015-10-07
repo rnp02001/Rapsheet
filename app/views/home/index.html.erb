@@ -27,8 +27,9 @@
     <p>Click the button below to start a new thread:</p>
     <p>
 
-      <%= link_to 'Show Comments',  comments_show_path, remote: true, class: 'btn btn-primary btn-lg' %>
-      <%= link_to 'Add new topic', new_comment_path, remote: true, class: 'btn btn-primary btn-lg' %>
+      <%= link_to 'Show Comments',  comments_show_path, remote: true, class: 'btn btn-primary btn-lg', id: 'show-comments' %>
+      <%= link_to 'Hide Comments',  comments_hide_path, remote: true, class: 'btn btn-primary btn-lg', id: 'hide-comments' %>
+      <%= link_to 'Add Comment', new_comment_path, remote: true, class: 'btn btn-primary btn-lg' %>
     </p>
   </div>
 </div>

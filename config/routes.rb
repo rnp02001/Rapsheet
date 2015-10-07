@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :comments, only: [:index, :create]
   get '/comments/new/(:parent_id)', to: 'comments#new', as: :new_comment
   get '/comments/show', to: 'comments#show'
+  get '/comments/hide', to: 'comments#hide'
 
   resources :users, :only => [:index, :show, :update]
 
