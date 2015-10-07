@@ -1,5 +1,5 @@
-<div class="jumbotron" >
-  <div class="container">
+<div class="container" >
+  <div class="jumbotron">
 
 
     <div class="row">
@@ -7,13 +7,16 @@
         <b>Select Crime Rate</b><br/>
         <%= render "home/crime_rate_form" %>
       </div>
-      <div class="container col-xs-12 col-md-10" style="position: relative; width: 75%;">
+
+      <div class="col-x-1 col-md-1"><%= link_to 'Play', animate_year_path, remote: true, class: 'btn btn-primary btn-md', id: 'play-button' %></div>
+
+      <div class="container col-xs-11 col-md-9" style="position: relative; width: 75%;">
+
+
         <label for="year">Year</label>
         <input type="range" min="1965" max="2012" value="1965" id="fader" step="1" oninput="outputUpdate(value)">
         <output for="fader" id="year">1965</output>
       </div>
-    </div>
-
     <div class="row">
       <div class="holding_div"></div>
       <div class="col-xs-12" id="map-container"></div>
@@ -23,12 +26,12 @@
 
 <div class="jumbotron">
   <div class="container">
-    <h1>Join the discussion</h1>
-    <p>Click the button below to start a new thread:</p>
+    <h3>Join the discussion</h3>
     <p>
 
-      <%= link_to 'Show Comments',  comments_show_path, remote: true, class: 'btn btn-primary btn-lg' %>
-      <%= link_to 'Add new topic', new_comment_path, remote: true, class: 'btn btn-primary btn-lg' %>
+      <%= link_to 'Show Comments',  comments_show_path, remote: true, class: 'btn btn-primary btn-lg', id: 'show-comments' %>
+      <%= link_to 'Hide Comments',  comments_hide_path, remote: true, class: 'btn btn-primary btn-lg', id: 'hide-comments' %>
+      <%= link_to 'Add Comment', new_comment_path, remote: true, class: 'btn btn-primary btn-lg' %>
     </p>
   </div>
 </div>

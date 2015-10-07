@@ -1,1 +1,6 @@
+$("#show-comments").toggle();
+$("#hide-comments").toggle();
 $(".comment-div").append("<%= j render "comment_master" %>")
+$('html, body').animate({
+    scrollTop: $(".comment-div").offset().top
+}, 2000);
