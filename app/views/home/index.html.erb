@@ -8,7 +8,6 @@
         <%= render "home/crime_rate_form" %>
       </div>
       <div class='col-xs-1 col-md-2'>
-        <button onclick='playMap()'>Play</button>
         <div id='play_button'</div>
       </div>
     </div>
@@ -17,12 +16,11 @@
         <input type="range" min="1965" max="2012" value="1965" id="fader" step="1" oninput="outputUpdate(value)">
         <output for="fader" id="year">1965</output>
       </div>
-
-  </div>
     <div class="row">
       <div class="holding_div"></div>
-        <div class="col-xs-12" id="map-container"></div>
+      <div class="col-xs-12" id="map-container"></div>
     </div>
+  </div>
 </div>
 
 <div class="jumbotron">
