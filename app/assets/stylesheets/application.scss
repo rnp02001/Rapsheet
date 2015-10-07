@@ -5,3 +5,4 @@
 @import "slidebar";
 
 .replies {margin-left: 50px;}
+#hide-comments {display: none;} //This belongs in home.scss, but it isn't working there

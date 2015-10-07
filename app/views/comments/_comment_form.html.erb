@@ -1,8 +1,7 @@
-<%= form_for(@comment) do |f| %>
+<%= form_for(@comment, remote: true) do |f| %>
   <% if @comment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
-
       <ul>
         <% @comment.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
@@ -11,10 +10,13 @@
     </div>
   <% end %>
 
+
+<% if @comment.parent_id == nil %>
   <div class="form-group">
-    <%= f.label :title %>
+     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control' %>
   </div>
+<% end %>
 
   <div class="form-group">
     <%= f.label :author %>

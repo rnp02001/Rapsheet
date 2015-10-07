@@ -25,10 +25,10 @@ var dataManipulators =  function(minimums, maximums, states){
   var dataset = {};
 
   series.forEach(function(item){ //
-        var iso = item[0],
+        var state = item[0],
           value = item[1],
           rank = item[2];
-        dataset[iso] = { numberOfThings: value, fillColor: paletteScale(value), ranking: rank };
+        dataset[state] = { numberOfThings: value, fillColor: paletteScale(value), ranking: rank };
     });
     us_map(dataset);
 };
@@ -65,5 +65,3 @@ var dataManipulators =  function(minimums, maximums, states){
   	document.querySelector('#year').value = year;
     $("#form_year").val(year);
   }
-
-  

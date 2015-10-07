@@ -1,20 +1,20 @@
 <% if !!comment.parent_id %>
-  <div class="well replies">
-<% else %> <div class="well">
+  <div class="well replies" id='id-<%=j "#{comment.id}"%>'>
+<% else %> <div class="well" id='id-<%=j "#{comment.id}"%>'>
 <% end %>
   <h2><%= comment.title %></h2>
   <p class="text-muted">Added by <strong><%= comment.author %></strong> on
     <%= l(comment.created_at, format: '%B, %d %Y %H:%M:%S') %></p>
 
-  <blockquote>
     <p><%= comment.body %></p>
-  </blockquote>
 
   <% from_reply_form ||= nil %>
   <% unless from_reply_form %>
-    <% if comment.leaf? %>
+    <% if comment.leaf? && comment.parent_id == nil %>
       <small class="text-muted">There are no replies yet - be the first one to reply!</small>
     <% end %>
-    <p><%= link_to 'reply', new_comment_path(comment.id), remote: true %></p>
+    <% unless comment.parent_id %>
+    <p><%= link_to 'reply', new_comment_path(comment.id), class: 'reply_link', remote: true %></p>
+    <% end %>
   <% end %>
 </div>

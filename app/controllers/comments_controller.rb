@@ -5,15 +5,20 @@ class CommentsController < ApplicationController
 
   def new
     @comment = Comment.new(parent_id: params[:parent_id])
-    # respond_to do |format|
-    #   format.html { render(:text => "not implemented") }
-    #   format.js { render 'comment_new' }
-    # end
-    render "comment_new"
+    respond_to do |format|
+      format.js { render :comment_new }
+    end
   end
 
+  def hide
+    respond_to do |format|
+      format.js { render :comment_hide}
+    end
+  end
+
+
   def show
-    @comments = Comment.all
+    @comments = Comment.flatten_nested_hash(Comment.hash_tree)
     respond_to do |format|
       format.js { render :comment_show }
     end
@@ -28,12 +33,15 @@ class CommentsController < ApplicationController
     end
 
     if @comment.save
-      flash[:success] = 'Your comment was successfully added!'
-      redirect_to root_url
+      @last_comment = Comment.all.where(author: params["comment"]["author"], body: params["comment"]["body"]).last
+      respond_to do |format|
+        format.js { render :comment_last }
+      end
     else
       render 'new'
     end
   end
+
 
   private
 
