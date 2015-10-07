@@ -13,8 +13,8 @@
 //= require d3
 //= require underscore
 //= require jquery
-//= require bootstrap-sprockets
-//= require bootstrap-slider
+// require bootstrap-sprockets
+// require bootstrap-slider
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .

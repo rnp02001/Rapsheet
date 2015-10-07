@@ -1,0 +1,8 @@
+$("#show-comments").toggle();
+$("#hide-comments").toggle();
+$("html, body").animate({
+     scrollTop: 0
+ }, 2000);
+$(".comment-div").children().fadeOut(1500, function(){
+  $(".comment-div").empty();
+});
