@@ -1,13 +1,14 @@
 <div class="container">
   <h1>User Profile</h1>
 
-  <h3>Username: <%= @user.username %></h3>
-  <h3>Email: <%= @user.email %></h3>
-  <% if !!(@user.state) %>
-    <h3>Location: <%= @user.state.name %></h3>
-  <% else %>
-    <%= render 'location_form' %>
-  <% end %>
+<h3>Username: <%= @user.username %></h3>
+<h3>Email: <%= @user.email %></h3>
+<% if !!(@user.state) %>
+  <h3>Location: <%= @user.state.name %></h3>
+<% else %>
+  <%= render 'location_form' %>
+<% end %>
+<%= render @comments %>
 
   <h3>Comments</h3>
 </div>

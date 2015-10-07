@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
   end
 
   def new
+    @user_id = current_user.id
     @comment = Comment.new(parent_id: params[:parent_id])
     respond_to do |format|
       format.js { render :comment_new }
@@ -46,7 +47,7 @@ class CommentsController < ApplicationController
   private
 
     def comment_params
-      params.require(:comment).permit(:title, :body, :author)
+      params.require(:comment).permit(:title, :body, :author, :user_id)
     end
 
 end
