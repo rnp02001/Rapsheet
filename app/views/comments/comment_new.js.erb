@@ -1,1 +1,5 @@
-$(".comment-div").append("<%= j render "comment_new" %>")
+<% if @comment.parent_id %>
+    $("#id-<%= j @comment.parent_id.to_json %>").append("<%= j render "comment_new" %>");
+  <% else %>
+    $(".comment-div").prepend("<%= j render "comment_new" %>");
+  <% end %>
