@@ -5,15 +5,13 @@ class CommentsController < ApplicationController
 
   def new
     @comment = Comment.new(parent_id: params[:parent_id])
-    # respond_to do |format|
-    #   format.html { render(:text => "not implemented") }
-    #   format.js { render 'comment_new' }
-    # end
-    render "comment_new"
+    respond_to do |format|
+      format.js { render :comment_new }
+    end
   end
 
   def show
-    @comments = Comment.all
+    @comments = Comment.flatten_nested_hash(Comment.hash_tree)
     respond_to do |format|
       format.js { render :comment_show }
     end
