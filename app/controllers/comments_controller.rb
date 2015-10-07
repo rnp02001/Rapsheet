@@ -10,6 +10,13 @@ class CommentsController < ApplicationController
     end
   end
 
+  def hide
+    respond_to do |format|
+      format.js { render :comment_hide}
+    end
+  end
+
+
   def show
     @comments = Comment.flatten_nested_hash(Comment.hash_tree)
     respond_to do |format|
@@ -26,12 +33,15 @@ class CommentsController < ApplicationController
     end
 
     if @comment.save
-      flash[:success] = 'Your comment was successfully added!'
-      redirect_to root_url
+      @last_comment = Comment.all.where(author: params["comment"]["author"], body: params["comment"]["body"]).last
+      respond_to do |format|
+        format.js { render :comment_last }
+      end
     else
       render 'new'
     end
   end
+
 
   private
 
