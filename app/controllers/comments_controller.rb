@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
   end
 
   def new
+    @user_id = current_user.id
     @comment = Comment.new(parent_id: params[:parent_id])
     respond_to do |format|
       format.js { render :comment_new }
@@ -25,6 +26,7 @@ class CommentsController < ApplicationController
   end
 
   def create
+    binding.pry
     if params[:comment][:parent_id].to_i > 0
     parent = Comment.find_by_id(params[:comment].delete(:parent_id))
     @comment = parent.children.build(comment_params)
@@ -46,7 +48,7 @@ class CommentsController < ApplicationController
   private
 
     def comment_params
-      params.require(:comment).permit(:title, :body, :author)
+      params.require(:comment).permit(:title, :body, :author, :user_id)
     end
 
 end

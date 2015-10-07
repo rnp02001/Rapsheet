@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
     }
 
   belongs_to :state
+  has_many :comments
 
   def self.find_for_database_authentication(warden_conditions)
       conditions = warden_conditions.dup
