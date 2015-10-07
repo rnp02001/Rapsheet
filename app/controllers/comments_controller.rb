@@ -16,7 +16,6 @@ class CommentsController < ApplicationController
     end
   end
 
-
   def show
     @comments = Comment.flatten_nested_hash(Comment.hash_tree)
     respond_to do |format|
