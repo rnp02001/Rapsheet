@@ -20,10 +20,15 @@
     <p class="alert alert-danger"><%= alert %></p>
   <% end %>
 
-  <%= render 'home/login' %>
 
-  <%= yield %>
+  <div class="container">
+    <%= render 'home/login' %>
 
-  <%= render 'layouts/footer' %>
+    <%= yield %>
+  </div>
+
+  <div id="footer" style="width: 100%;">
+    <p>&copy 2015 Rapsheet</p>
+  </div>
 </body>
 </html>
