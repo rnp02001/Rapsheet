@@ -48,6 +48,7 @@ end
 
 # Make with the prettiez
 gem 'bootstrap-sass', '~> 3.3.5'
+gem 'bootswatch-rails'
 gem 'font-awesome-rails'
 gem 'bootstrap-slider-rails'
 
