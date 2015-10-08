@@ -3,8 +3,6 @@ class AnnualStateCrimeRatesController < ApplicationController
   end
 
   def range_year_crime #This should be refactored into the database or a rake task.
-    # binding.pry
-    # session[:link_to_root] = false
     range = AnnualStateCrimeRate.range_for_crime(params["crime"])
     @minimums = range.min
     @maximums = range.max
