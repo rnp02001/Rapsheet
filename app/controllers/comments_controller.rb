@@ -4,10 +4,16 @@ class CommentsController < ApplicationController
   end
 
   def new
-    @user_id = current_user.id
-    @comment = Comment.new(parent_id: params[:parent_id])
-    respond_to do |format|
-      format.js { render :comment_new }
+    if current_user
+      @user_id = current_user.id
+      @comment = Comment.new(parent_id: params[:parent_id])
+      respond_to do |format|
+        format.js { render :comment_new }
+      end
+    else
+      respond_to do |format|
+        format.js { render :comment_log_in_required }
+      end
     end
   end
 
