@@ -50,7 +50,7 @@ $(document).on('ready page:load', function(){
       });
     };
 
-    us_map.legend();
+    //us_map.legend();
     // broken right now
   // d3.select(window).on('resize', function() {
   //     map.resize();
