@@ -9,7 +9,7 @@
  <%= javascript_include_tag 'application'%>
  <%= csrf_meta_tags %>
 </head>
-<body>
+<body style="background-color: #E6E6E6">
 
   <%= render 'layouts/header' %>
 
@@ -21,7 +21,8 @@
   <% end %>
 
 
-  <div class="container">
+
+  <div id="page-container" class="container">
     <%= yield %>
   </div>
 

@@ -4,21 +4,34 @@
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+
+        <% if user_signed_in? %>
+          <span class="icon-bar">  <%= link_to 'Edit profile', edit_user_registration_path %> </span>
+          <span class="icon-bar">  <%= link_to "Logout", destroy_user_session_path, method: :delete %> </span>
+        <% else %>
+          <span class="icon-bar">  <%= link_to "Sign Up", new_user_registration_path %> </span>
+          <span class="icon-bar">  <%= link_to "Login", new_user_session_path %> </span>
+        <% end %>
       </button>
       <%= link_to "Rapsheet", root_path, class: "navbar-brand" %>
       <!-- <a class="navbar-brand" href="#">Rapsheet</a> -->
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="nav navbar-nav">
-        <li><a href="#" target="_blank">About</a></li>
-        <li><a href="#" target="_blank">Contact</a></li>
+      <ul class="nav navbar-nav nav-left">
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://github.com/ryanponte/rapsheet/" target="_blank">GitHub</a></li>
         <% if user_signed_in? %>
-          <li><%= link_to "Profile", current_user %></li>
+          <li class = "signed-in">  <%= link_to "Profile", current_user %></li>
+          <li class = "signed-in">  <%= link_to "Logout", destroy_user_session_path, method: :delete %> </li>
+        <% else %>
+          <li class = "signed-in">  <%= link_to "Sign Up", new_user_registration_path %> </li>
+          <li class = "signed-in">  <%= link_to "Login", new_user_session_path %> </li>
         <% end %>
+
+      </ul>
+      </div>
       </ul>
     </div>
   </div>

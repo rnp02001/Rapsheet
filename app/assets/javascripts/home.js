@@ -36,7 +36,7 @@ $(document).on('ready page:load', function(){
       data: dataset,
       responsive: true,
 
-      // legend: true, ============ the legend is not working yet
+      legend: true,// ============ the legend is not working yet
       geographyConfig: {
         highlightFillColor: function(geo) {
             return geo.fillColor || '#F5F5F5';
@@ -49,6 +49,8 @@ $(document).on('ready page:load', function(){
        }
       });
     };
+
+    us_map.legend();
     // broken right now
   // d3.select(window).on('resize', function() {
   //     map.resize();
