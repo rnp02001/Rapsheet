@@ -19,16 +19,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="nav navbar-nav nav-left">
-        <li><a href="#" target="_blank">About</a></li>
-        <li><a href="#" target="_blank">Contact</a></li>
-        <li>
-        <% if user_signed_in? %>
-          <li><%= link_to "Profile", current_user %></li>
-        <% end %>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://github.com/ryanponte/rapsheet/" target="_blank">GitHub</a></li>
         <% if user_signed_in? %>
-          <li class = "signed-in">  <%= link_to 'Edit profile', edit_user_registration_path %> </li>
+          <li class = "signed-in">  <%= link_to "Profile", current_user %></li>
           <li class = "signed-in">  <%= link_to "Logout", destroy_user_session_path, method: :delete %> </li>
         <% else %>
           <li class = "signed-in">  <%= link_to "Sign Up", new_user_registration_path %> </li>
