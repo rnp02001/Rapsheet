@@ -50,7 +50,7 @@ $(document).on('ready page:load', function(){
       });
     };
 
-    us_map.legend();
+
     // broken right now
   // d3.select(window).on('resize', function() {
   //     map.resize();
@@ -60,3 +60,12 @@ $(document).on('ready page:load', function(){
   	document.querySelector('#year').value = year;
     $("#form_year").val(year);
   }
+
+$(document).on('ready page:load', function(){
+  var ctx = document.getElementById("myCanvas").getContext("2d");
+  var my_gradient = ctx.createLinearGradient(0,0,300,0);
+  my_gradient.addColorStop(0,"white");
+  my_gradient.addColorStop(1,"red");
+  ctx.fillStyle = my_gradient;
+  ctx.fillRect(0,0,300,50);
+});
