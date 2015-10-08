@@ -14,9 +14,14 @@
 //   $("#crime_form").submit();
 // }
 
-for (i = 1965; i <= 2012; ++i) {
-  $("#year").val(i);
-  $("#form_year").val(i);
+
+// for (i = 1965; i <= 2012; i++) {
+//   setDelay(i);
+// }
+
+// for (i = 1965; i <= 2012; ++i) {
+//   $("#year").val(i);
+//   $("#form_year").val(i);
 
 
 
@@ -26,7 +31,8 @@ for (i = 1965; i <= 2012; ++i) {
   // data:
   // success: function that does the cool map stuff
   // setDelay(i);
-}
+//}
+
 //
 // function setDelay(i) {
 //   setTimeout(function(){
@@ -36,3 +42,27 @@ for (i = 1965; i <= 2012; ++i) {
 //     console.log(i);
 //   }, 1000);
 // }
+
+//
+// (function() {
+//   'use strict';
+//   function updateAndSubmitForm(year){
+//     $("#year").val(i);
+//     $("#form_year").val(i);
+//     $("#crime_form").submit();
+//   }
+//   var startYear = 1965;
+//   var endYear = 2012;
+//   var i = startYear;
+//   updateAndSubmitForm(i);
+//   $("#crime_form").on("ajax:success", function(e, data, status, xhr){
+//     // Until your max year
+//     i += 1;
+//     updateAndSubmitForm(i);
+//     console.log("i is now", i);
+//     if (i === 2012) { $("#crime_form").off("ajax:success"); }
+//   })
+//   $("#crime_form").on("ajax:error",  function(e, xhr, status, error){
+//     debugger;
+//   })
+// }());

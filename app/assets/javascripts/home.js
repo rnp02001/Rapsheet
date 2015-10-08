@@ -35,6 +35,7 @@ $(document).on('ready page:load', function(){
       scope: 'usa',
       data: dataset,
       responsive: true,
+
       // legend: true, ============ the legend is not working yet
       geographyConfig: {
         highlightFillColor: function(geo) {
