@@ -3,13 +3,19 @@
 
 <h3>Username: <%= @user.username %></h3>
 <h3>Email: <%= @user.email %></h3>
+
+
 <% if !!(@user.state) %>
   <h3>Location: <%= @user.state.name %></h3>
 <% else %>
   <%= render 'location_form' %>
 <% end %>
 <h3><%= link_to 'Edit profile', edit_user_registration_path %></h3>
+
+<br>
+<br>
+<h3>Comments</h3>
 <%= render @comments %>
 
-  <h3>Comments</h3>
+
 </div>

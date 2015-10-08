@@ -1,6 +1,6 @@
 <%= form_tag("/range_year_crime", id: "crime_form", method: "post", remote: true) do %>
 
-  <%= select_tag "crime", options_from_collection_for_select(@crimes, "id", "name") %>
+  <%= select_tag "crime", options_from_collection_for_select(@crimes, "id", "name"), class: "form-control" %>
 
   <br>
   <%= hidden_field_tag 'form_year', value=1965 %>
