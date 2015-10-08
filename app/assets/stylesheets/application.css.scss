@@ -14,6 +14,18 @@
  *= require_self
  */
 
+.navbar-nav {
+  font-weight: 600;
+}
+
+.navbar-brand {
+  font-weight: bolder;
+}
+
+.signed-in {
+  float: right;
+}
+
 .replies {
   margin-left: 50px;
 }
@@ -21,4 +33,10 @@
 #hide-comments {
  display: none;
 }
+
+.well {
+  width: 60%;
+}
+
+
 //This probably belongs in home.scss, but it isn't working there
