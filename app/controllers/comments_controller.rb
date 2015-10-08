@@ -34,6 +34,7 @@ class CommentsController < ApplicationController
     end
 
     if @comment.save
+      @comments = Comment.all
       @last_comment = Comment.all.where(author: params["comment"]["author"], body: params["comment"]["body"]).last
       render :comment_last
     else
