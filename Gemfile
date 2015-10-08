@@ -39,6 +39,13 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'simplecov'
 
+  # Experimental suite of gems for testing login support with Devise
+  gem 'factory_girl_rails' # factory_girl lets us code smart database fixtures in Ruby; factory_girl_rails integrates rails with factory_girl
+  gem 'capybara' # helps you test web applications by simulating how a real user would interact with your app
+  gem 'guard-rspec' # integrates guard with rails; guard makes rerunning tests easier by watching the filesystem for when you save files and triggers events automatically
+  gem 'spring-commands-rspec' # lets you integrate rspec with spring, enabling your tests to run faster
+  gem 'vcr' # record your test suite's HTTP interactions and replay them during future test runs for fast, deterministic, accurates tests
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -48,6 +55,11 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+# Adding as placeholder; webmock locks down your test environment from talking to the internet
+# group :test do
+#   gem 'webmock'
+# end
 
 # Make with the prettiez
 gem 'bootstrap-sass', '~> 3.3.5'
