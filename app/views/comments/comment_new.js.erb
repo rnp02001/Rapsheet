@@ -2,5 +2,6 @@ $(".reply_link").hide();
 <% if @comment.parent_id %>
   $("#id-<%= j @comment.parent_id.to_json %>").append("<%= j render "comment_form" %>");
 <% else %>
+  $(".comment-div").empty();
   $(".comment-div").prepend("<%= j render "comment_form" %>");
 <% end %>
