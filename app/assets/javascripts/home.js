@@ -8,6 +8,8 @@ $(document).on('ready page:load', function(){
   $("#fader").on("input", (function() {
     $("#crime_form").submit();
   }));
+
+  canvasBuilder();
 });
 
   var dataManipulators =  function(minimums, maximums, states){
@@ -48,22 +50,24 @@ $(document).on('ready page:load', function(){
        }
       });
     };
-
-    // broken right now
+  //
+  // function resizerListener (){
   // d3.select(window).on('resize', function() {
-  //     map.resize();
-  // });
+  //   debugger;
+  //     us_map.resize();
+  //   });
+  // }
 
   function outputUpdate(year) {
   	document.querySelector('#year').value = year;
     $("#form_year").val(year);
   }
 
-$(document).on('ready page:load', function(){
+var canvasBuilder = function(){
   var ctx = document.getElementById("myCanvas").getContext("2d");
   var my_gradient = ctx.createLinearGradient(0,0,500,0);
   my_gradient.addColorStop(0,"white");
   my_gradient.addColorStop(1,"red");
   ctx.fillStyle = my_gradient;
   ctx.fillRect(0,0,500,25);
-});
+};
