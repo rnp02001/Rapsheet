@@ -6,7 +6,7 @@ RSpec.describe User, type: :model do
   end
 
   # Validation Tests
-  context "validations" do
+  context "Validations" do
     it "is invalid without a username" do
       expect(FactoryGirl.build(:user, username: nil)).to_not be_valid
     end
@@ -23,7 +23,6 @@ RSpec.describe User, type: :model do
       # binding.pry
       expect(FactoryGirl.build(:user, password_confirmation: nil)).to_not be_valid
     end
-
 
     it "is invalid without a state_id" do
       expect(FactoryGirl.build(:user, state_id: nil)).to_not be_valid
