@@ -49,7 +49,6 @@ $(document).on('ready page:load', function(){
       });
     };
 
-
     // broken right now
   // d3.select(window).on('resize', function() {
   //     map.resize();
