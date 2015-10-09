@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get '/comments/show', to: 'comments#show'
   get '/comments/hide', to: 'comments#hide'
   get '/comments/last_submitted', to: 'comments#last_submitted', as: :last_submitted
-
+  get '/comments/cancel', to: 'comments#cancel', as: :comment_cancel
   resources :users, :only => [:index, :show, :update]
 
 end

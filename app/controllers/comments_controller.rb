@@ -42,6 +42,10 @@ class CommentsController < ApplicationController
     end
   end
 
+  def cancel
+    render :comment_cancel
+  end
+
 
   private
 
