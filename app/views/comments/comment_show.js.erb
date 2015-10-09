@@ -1,5 +1,6 @@
 $("#show-comments").toggle();
 $("#hide-comments").toggle();
+$("#add-comment").show();
 $(".comment-div").append("<%= j render @comments %>")
 $('html, body').animate({
     scrollTop: $(".comment-div").offset().top
