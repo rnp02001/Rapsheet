@@ -1,5 +1,5 @@
 $(".comment-div").empty()
 $(".comment-div").append("<%= j render @comments %>");
-$(".comment-div").children().fadeOut(1500, function(){
-  $(".comment-div").empty();
-});
+$('html, body').animate({
+    scrollTop: $("#id-<%=@last_comment.id %>").offset().top
+}, 300);
