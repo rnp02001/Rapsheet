@@ -1,5 +1,5 @@
 $(".comment-div").empty()
-$(".comment-div").append("<%= j render "comment_master" %>");
+$(".comment-div").append("<%= j render @comments %>");
 $('html, body').animate({
     scrollTop: $("#id-<%=@last_comment.id %>").offset().top
 }, 300);

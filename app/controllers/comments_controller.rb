@@ -35,7 +35,7 @@ class CommentsController < ApplicationController
 
     if @comment.save
       @comments = Comment.all
-      @last_comment = Comment.all.where(author: params["comment"]["author"], body: params["comment"]["body"]).last
+      @last_comment = Comment.all.where(user_id: current_user.id).last
       render :comment_last
     else
       render 'new'
@@ -46,7 +46,7 @@ class CommentsController < ApplicationController
   private
 
     def comment_params
-      params.require(:comment).permit(:title, :body, :author, :user_id)
-    end  
+      params.require(:comment).permit(:title, :body, :user_id)
+    end
 
 end
