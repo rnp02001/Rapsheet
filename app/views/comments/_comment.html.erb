@@ -2,8 +2,9 @@
   <div class="well replies" id='id-<%=j "#{comment.id}"%>'>
 <% else %> <div class="well" id='id-<%=j "#{comment.id}"%>'>
 <% end %>
+
   <h2><%= comment.title %></h2>
-  <p class="text-muted">Added by <strong><%= comment.author %></strong> on
+  <p class="text-muted">Added by <strong> <%=User.all.find_by_id(comment.user_id).username%> </strong> on
     <%= l(comment.created_at, format: '%B, %d %Y %H:%M:%S') %></p>
 
     <p><%= comment.body %></p>
