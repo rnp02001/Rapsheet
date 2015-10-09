@@ -3,12 +3,12 @@ require 'devise'
 
 RSpec.configure do |config|
 
-  config.include ControllerHelpers, type: :controller
-    Warden.test_mode!
-
-  config.after do
-    Warden.test_rest!
-  end
+  # config.include ControllerHelpers, type: :controller
+  #   Warden.test_mode!
+  #
+  # config.after do
+  #   Warden.test_rest!
+  # end
 
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
