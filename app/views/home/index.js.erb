@@ -3,5 +3,10 @@ $("#map-container").empty();
 var minimums =  <%= @minimums %>;
 var maximums =  <%= @maximums %>;
 var states = <%= @states %>;
+var legend_crime = $("#crime :selected").text()
 
 dataManipulators(minimums, maximums, states);
+
+$("#min_legend").text(minimums/10 + " per 100,000")
+$("#max_legend").text(maximums/10 + " per 100,000")
+$("#legend_name").text(legend_crime)

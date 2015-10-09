@@ -17,11 +17,29 @@
         <input type="range" min="1965" max="2012" value="1965" id="fader" step="1" oninput="outputUpdate(value)">
         <output for="fader" id="year">1965</output>
       </div>
+    </div>
 
     <div class="row">
       <div class="holding_div"></div>
         <div class="col-xs-12" id="map-container"></div>
     </div>
+
+    <div class="container-fluid legend">
+      <div class="row">
+        <div class="col-xs-3"></div><div class="col-xs-6 text-left" id="legend_name"></div><div class="col-xs-3"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3"></div>
+        <canvas class="col-xs-6" id="myCanvas" width="500" height="25"></canvas>
+        <div class="col-xs-3"></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3"></div><div class="col-xs-3 text-left" id="min_legend"></div>
+        <div class="col-xs-3 text-right" id="max_legend"></div><div class="col-xs-3"></div>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <div class="jumbotron">
