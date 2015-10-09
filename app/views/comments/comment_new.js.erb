@@ -1,3 +1,4 @@
+$("#add-comment").hide()
 $(".reply_link").hide();
 <% if @comment.parent_id %>
   $("#id-<%= j @comment.parent_id.to_json %>").append("<%= j render "comment_form" %>");
@@ -5,3 +6,6 @@ $(".reply_link").hide();
   $(".comment-div").empty();
   $(".comment-div").prepend("<%= j render "comment_form" %>");
 <% end %>
+$('html, body').animate({
+    scrollTop: $("#comment_cancel").offset().top
+}, 2000);
