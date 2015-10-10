@@ -6,9 +6,6 @@ class User < ActiveRecord::Base
          :validatable
   validates_presence_of :password_confirmation, :if => :password
 
-  # validates_confirmation_of :password
-  validates_presence_of :state_id
-
   validates :username,
     :presence => true,
     :uniqueness => {

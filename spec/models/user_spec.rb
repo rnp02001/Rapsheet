@@ -22,10 +22,10 @@ RSpec.describe User, type: :model do
     it "is invalid without a password_confirmation" do
       expect(FactoryGirl.build(:user, password_confirmation: nil)).to_not be_valid
     end
-
-    it "is invalid without a state_id" do
-      expect(FactoryGirl.build(:user, state_id: nil)).to_not be_valid
-    end
+    
+    # it "is invalid without a state_id" do
+    #   expect(FactoryGirl.build(:user, state_id: nil)).to_not be_valid
+    # end
 
     # Association Tests
     context "Associations" do
@@ -36,7 +36,7 @@ RSpec.describe User, type: :model do
         user.save
 
         expect(user.comments).to include(comment)
-      end 
+      end
     end
   end
 end
