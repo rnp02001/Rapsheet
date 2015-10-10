@@ -22,21 +22,20 @@ RSpec.describe User, type: :model do
     it "is invalid without a password_confirmation" do
       expect(FactoryGirl.build(:user, password_confirmation: nil)).to_not be_valid
     end
-    
+
     # it "is invalid without a state_id" do
     #   expect(FactoryGirl.build(:user, state_id: nil)).to_not be_valid
     # end
-
-    # Association Tests
+  end
+    #Association Tests
     context "Associations" do
       it "can have many comments" do
         user = FactoryGirl.build(:user)
         comment = FactoryGirl.build(:comment)
         user.comments << comment
-        user.save
+        user.save # do we need this? Is user not already saved by FactoryGirl.build(:user)?
 
         expect(user.comments).to include(comment)
       end
     end
-  end
 end
