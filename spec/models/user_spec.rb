@@ -32,7 +32,8 @@ RSpec.describe User, type: :model do
       user = FactoryGirl.build(:user)
       comment = FactoryGirl.build(:comment)
       user.comments << comment
-      user.save # do we need this? Is user not already saved by FactoryGirl.build(:user)?
+      # user.save # do we need this? Is user not already saved by FactoryGirl.build(:user)?
+      # commenting out Line 35 cuts test runtime by 1/2 ; why is this? 
 
       expect(user.comments).to include(comment)
     end
