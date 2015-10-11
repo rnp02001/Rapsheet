@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+
+  # Factory Test 
   it "should have a factory" do
     expect(FactoryGirl.build(:user)).to be_valid
   end
