@@ -33,6 +33,8 @@ RSpec.describe AnnualStateCrimeRate, type: :model do
       expect(annual_state_crime_rate.crimes).to include(crime)
     end
 
+    # Why are these tests returning nil?
+    
     it "can belong to a state" do
       annual_state_crime_rate = FactoryGirl.build(:annual_state_crime_rate)
       state = FactoryGirl.build(:state)
