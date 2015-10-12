@@ -19,7 +19,7 @@ RSpec.describe AnnualStateCrimeRate, type: :model do
 
     it "can have many years" do
       annual_state_crime_rate = FactoryGirl.build(:annual_state_crime_rate)
-      state = FactoryGirl.build(:year)
+      year = FactoryGirl.build(:year)
       annual_state_crime_rate.years << year
 
       expect(annual_state_crime_rate.years).to include(year)
@@ -27,10 +27,34 @@ RSpec.describe AnnualStateCrimeRate, type: :model do
 
     it "can have many crimes" do
       annual_state_crime_rate = FactoryGirl.build(:annual_state_crime_rate)
-      state = FactoryGirl.build(:crime)
+      crime = FactoryGirl.build(:crime)
       annual_state_crime_rate.crimes << crime
 
       expect(annual_state_crime_rate.crimes).to include(crime)
+    end
+
+    it "can belong to a state" do
+      annual_state_crime_rate = FactoryGirl.build(:annual_state_crime_rate)
+      state = FactoryGirl.build(:state)
+      annual_state_crime_rate.states << state
+
+      expect(annual_state_crime_rate.state).to eq(state)
+    end
+
+    it "can belong to a year" do
+      annual_state_crime_rate = FactoryGirl.build(:annual_state_crime_rate)
+      year = FactoryGirl.build(:year)
+      annual_state_crime_rate.years << year
+
+      expect(annual_state_crime_rate.year).to eq(year)
+    end
+
+    it "can belong to a crime" do
+      annual_state_crime_rate = FactoryGirl.build(:annual_state_crime_rate)
+      crime = FactoryGirl.build(:crime)
+      annual_state_crime_rate.crimes << crime
+
+      expect(annual_state_crime_rate.crime).to eq(crime)
     end
   end
 end
