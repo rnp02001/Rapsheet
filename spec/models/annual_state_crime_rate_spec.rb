@@ -34,10 +34,10 @@ RSpec.describe AnnualStateCrimeRate, type: :model do
     end
 
     # Why are these tests returning nil?
-    
+
     it "can belong to a state" do
-      annual_state_crime_rate = FactoryGirl.build(:annual_state_crime_rate)
-      state = FactoryGirl.build(:state)
+      annual_state_crime_rate = FactoryGirl.create(:annual_state_crime_rate)
+      state = FactoryGirl.create(:state)
       annual_state_crime_rate.states << state
 
       expect(annual_state_crime_rate.state).to eq(state)
