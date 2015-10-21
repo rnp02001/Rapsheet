@@ -8,7 +8,7 @@ class AnnualStateCrimeRatesController < ApplicationController
     @maximums = range.max
     @states = AnnualStateCrimeRate.rates_for_year_and_crime(params["form_year"], params["crime"]).to_json.html_safe
     @crimes = Crime.all
-    respond_to do |format|
+    respond_to do |format|  
       format.js {render 'home/index'}
     end
   end
