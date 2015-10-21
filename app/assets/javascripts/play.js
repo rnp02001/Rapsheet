@@ -26,7 +26,7 @@
     });
 
     $("#crime_form").on("ajax:error",  function(e, xhr, status, error){
-      alert('Error');
+      console.log('Error with Play')
     });
   }
   $(function(){
