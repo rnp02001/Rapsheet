@@ -40,8 +40,6 @@ $(document).on('ready page:load', function(){
       scope: 'usa',
       data: dataset,
       responsive: true,
-
-      legend: true,// ============ the legend is not working yet
       geographyConfig: {
         highlightFillColor: function(geo) {
             return geo.fillColor || '#F5F5F5';
@@ -55,16 +53,7 @@ $(document).on('ready page:load', function(){
       });
     };
 
-    // broken right now
-  // d3.select(window).on('resize', function() {
-  //     map.resize();
-  // });
-
   function outputUpdate(year) {
   	document.querySelector('#year').value = year;
     $("#form_year").val(year);
   }
-
-$(document).on('ready page:load', function(){
-
-});
